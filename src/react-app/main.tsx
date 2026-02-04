@@ -8,7 +8,13 @@ import { authClient } from '../auth';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <NeonAuthUIProvider authClient={authClient}>
+    <NeonAuthUIProvider 
+      authClient={authClient}       
+      social={{
+        providers: ['google', 'github'],
+        }
+      }
+    >
       <BrowserRouter>
         <App />
       </BrowserRouter>
