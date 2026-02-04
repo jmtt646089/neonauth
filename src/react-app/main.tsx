@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { NeonAuthUIProvider } from '@neondatabase/neon-js/auth/react';
 import '@neondatabase/neon-js/ui/css';
 import App from './App';
-import { authClient } from './auth';
+import { authClient } from '../auth';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
