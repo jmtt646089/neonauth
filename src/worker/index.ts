@@ -25,4 +25,10 @@ app.post('api/auth/sign-in/email', async (c) => {
 });
 
 
+app.post('api/auth/sign-up/email', async (c) => {
+  console.log("success sign up email");
+  return c.json({ message: 'Success - sign up email' });
+});
+
+
 export default app;
