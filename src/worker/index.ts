@@ -1,14 +1,26 @@
 import { Hono } from "hono";
 const app = new Hono<{ Bindings: Env }>();
 
-app.get("/api/", (c) => c.json({ name: "Cloudflare" }));
+app.get("/api/", (c) => {
+  console.log("success - api");
+  c.json({ name: "Cloudflare" });
+});
+
 app.post('/api/auth/sign-in/social', async (c) => {
-  return c.json({ message: 'Success - sign in social' })
+  console.log("success sign in social");
+  return c.json({ message: 'Success - sign in social' });
 });
 
 
 app.get('api/auth/get-session', async (c) => {
-  return c.json({ message: 'Success - get session' })
+  console.log("success - get session");
+  return c.json({ message: 'Success - get session' });
 });
+
+app.post('api/auth/sign-in/email', async (c) => {
+  console.log("Success - email login");
+  return c.json({ message: 'Success - email login' });
+});
+
 
 export default app;
