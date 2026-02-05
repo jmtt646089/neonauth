@@ -34,7 +34,7 @@
 	},
 	"private": true,
 	"scripts": {
-		"build": "npm install @neondatabase/neon-js react-router-dom && npm list @neondatabase/neon-js && tsc -b && vite build",
+		"build": "npm install @neondatabase/neon-js react-router-dom && npm list @neondatabase/neon-js && npm list | grep neon && tsc -b && vite build",
 		"cf-typegen": "wrangler types",
 		"check": "tsc && vite build && wrangler deploy --dry-run",
 		"deploy": "wrangler deploy",
