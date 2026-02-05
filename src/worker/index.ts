@@ -8,6 +8,7 @@ app.get("/api", (c) => {
 });
 */
 
+/*
 app.post('/api/auth/sign-in/social', async (c) => {
   console.log("success sign in social");
   return c.json({ message: 'Success - sign in social' });
@@ -29,6 +30,6 @@ app.post('api/auth/sign-up/email', async (c) => {
   console.log("success sign up email");
   return c.json({ message: 'Success - sign up email' });
 });
-
+*/
 
 export default app;
