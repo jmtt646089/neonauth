@@ -1,12 +1,14 @@
 import { Hono } from "hono";
 //import { neonAuth } from "@neondatabase/neon-js/auth/cloudflare";
-import { auth } from "@neondatabase/neon-js/worker";
+//import { auth } from "@neondatabase/neon-js/worker";
+import { createAuthHandler } from "@neondatabase/neon-js";
 
 const app = new Hono<{ Bindings: Env }>();
 
 // Mount Neon Auth handlers - this is what's missing!
 //app.route("/api/auth", neonAuth());
-app.route("/api/auth", auth());
+//app.route("/api/auth", auth());
+app.route("/api/auth", createAuthHandler());
 
 /*
 app.get("/api", (c) => {
