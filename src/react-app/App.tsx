@@ -24,17 +24,18 @@ function Home() {
           <div style={{ textAlign: 'center' }}>
             <h1>Welcome!</h1>
             <p>You're successfully authenticated.</p>
-            <UserButton />
-          </div>
-        </div>
-      </SignedIn>
-      <button  
+			        <button  
      					onClick={() => {
 						fetch("api/auth/get-session")
 							.then((res) => res.json() as Promise<{ name: string }>)
 							.then((data) => console.log(data));
 					}}   
         > haha haha </ button>
+            <UserButton />
+          </div>
+        </div>
+      </SignedIn>
+
       <RedirectToSignIn />
     </>
   );
