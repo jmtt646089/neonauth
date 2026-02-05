@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 const app = new Hono<{ Bindings: Env }>();
 
-app.get("/api/", (c) => {
+app.get("/api", (c) => {
   console.log("success - api");
   c.json({ name: "Cloudflare" });
 });
