@@ -6,7 +6,7 @@ import {
   UserButton,
   RedirectToSignIn,
 } from '@neondatabase/neon-js/auth/react';
-
+import { useEffect } from 'react';
 
 
 
@@ -79,6 +79,16 @@ function Account() {
 }
 
 export default function App() {
+
+	  useEffect(() => {
+    // Add click listener to the entire document to debug
+    const handleClick = (e: MouseEvent) => {
+      console.log('Click detected:', e.target);
+    };
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, []);
+	
   return (
     <Routes>
       <Route path="/" element={<Home />} />
