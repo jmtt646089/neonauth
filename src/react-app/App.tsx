@@ -34,7 +34,7 @@ function Home() {
 							.then((res) => res.json() as Promise<{ name: string }>)
 							.then((data) => console.log(data));
 					}}   
-        > haha </>
+        > haha haha </>
       <RedirectToSignIn />
     </>
   );
