@@ -33,7 +33,7 @@ function Home() {
 							.then((res) => res.json() as Promise<{ name: string }>)
 							.then((data) => console.log(data));
 					}}   
-        > haha haha haha</ button>
+        > haha haha mn haha</ button>
             <UserButton size='icon' />
           </div>
         </div>
