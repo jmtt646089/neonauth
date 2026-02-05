@@ -28,6 +28,13 @@ function Home() {
           </div>
         </div>
       </SignedIn>
+      <button  
+     					onClick={() => {
+						fetch("api/auth/get-session")
+							.then((res) => res.json() as Promise<{ name: string }>)
+							.then((data) => console.log(data));
+					}}   
+        > haha </>
       <RedirectToSignIn />
     </>
   );
