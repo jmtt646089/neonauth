@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { authClient } from './auth';
+import { authClient } from '../auth';
 import './App.css';
 
 export default function App() {
