@@ -31,7 +31,7 @@ function Home() {
 							.then((data) => console.log(data));
 					}}   
         > haha haha </ button>
-            <UserButton />
+            <UserButton size='icon' />
           </div>
         </div>
       </SignedIn>
