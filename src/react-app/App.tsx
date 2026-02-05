@@ -27,13 +27,7 @@ function Home() {
           <div style={{ textAlign: 'center' }}>
             <h1>Welcome!</h1>
             <p>You're successfully authenticated.</p>
-			        <button  
-     					onClick={() => {
-						fetch("api/auth/get-session")
-							.then((res) => res.json() as Promise<{ name: string }>)
-							.then((data) => console.log(data));
-					}}   
-        > haha haha mn haha</ button>
+
             <UserButton size='icon' />
           </div>
         </div>
