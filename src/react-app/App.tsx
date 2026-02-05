@@ -6,28 +6,8 @@ import {
   UserButton,
   RedirectToSignIn,
 } from '@neondatabase/neon-js/auth/react';
-import { authClient } from '../auth';
-
-const handleGoogleSignIn = async () => {
-  try {
-    await authClient.signIn.social({
-      provider: "google",
-      callbackURL: window.location.origin,
-    });
-  } catch (error) {
-    console.error("Google sign-in error:", error);
-  }
-};
 
 
-useEffect(() => {
-  authClient.getSession().then(({ data }) => {
-    if (data?.session) {
-      setUser(data.session.user);
-    }
-    setLoading(false);
-  });
-}, []);
 
 
 function Home() {
